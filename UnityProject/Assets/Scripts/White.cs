@@ -16,16 +16,17 @@ public class White : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            aud.PlayOneShot(SoundShoot);
-            point.Translate(speed * Time.deltaTime, 0, 0);
+            aud.PlayOneShot(SoundShoot);  // 播放音效
 
-            // 三維向量 Vector3 - x,y,z
-            Vector3 pos = new Vector3(0, 0, 0);
-
-            // 四元數 Quaternion - x,y,z,w
-            Quaternion rot = new Quaternion(0, 0, 0, 0);
-            Instantiate(Bullet, pos, rot);
+            point.position = new Vector3(-3.3f,-2.2f,0);  // 子彈出發的位置
+            Quaternion rot = new Quaternion(0, 0, 0, 0);  // 子彈的旋轉
+            Instantiate(Bullet,point.position,rot); // 生出子彈
         }
+    }
+
+    private void Update()
+    {
+        Shoot();
     }
 
     #endregion

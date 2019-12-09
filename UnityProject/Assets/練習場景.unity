@@ -479,6 +479,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad78aaa5e4892c34c960add0a108dafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Hp: 10
+  TextHp: {fileID: 235324645}
+  aud: {fileID: 535656286}
+  SoundHit: {fileID: 8300000, guid: 0bda53c42232dad41a2a79b16daf8b10, type: 3}
 --- !u!82 &535656286
 AudioSource:
   m_ObjectHideFlags: 0
