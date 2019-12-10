@@ -17,10 +17,8 @@ public class White : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             aud.PlayOneShot(SoundShoot);  // 播放音效
-
-            point.position = new Vector3(-3.3f,-2.2f,0);  // 子彈出發的位置
             Quaternion rot = new Quaternion(0, 0, 0, 0);  // 子彈的旋轉
-            Instantiate(Bullet,point.position,rot); // 生出子彈
+            Instantiate(Bullet,point.position,rot); // 生出子彈，子彈的位置貼在白色不明物體上
         }
     }
 
